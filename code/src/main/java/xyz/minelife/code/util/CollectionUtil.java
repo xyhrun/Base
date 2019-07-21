@@ -2,6 +2,7 @@ package xyz.minelife.code.util;
 
 
 import xyz.minelife.code.algorithm.bean.ListNode;
+import xyz.minelife.code.algorithm.bean.TreeNode;
 
 /**
  * Description ：
@@ -19,4 +20,22 @@ public class CollectionUtil {
         s += "]";
         System.out.println(s);
     }
+
+    public static void printTree(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+        System.out.print(node.val +", ");
+        printTree(node.left);
+        printTree(node.right);
+    }
+
+//    private static String printBinaryTree(TreeNode node) {
+//        if (node == null) {
+//            return "";
+//        }
+//
+//        return node.val;
+//    }
 }
